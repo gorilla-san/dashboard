@@ -58,7 +58,7 @@ html {
     color: var(--white);
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 900px) {
     div .sidebar {
         position: fixed;
         left: -260px;
@@ -88,7 +88,7 @@ html {
 }
 
 
-@media screen and (min-width: 751px) {
+@media screen and (min-width: 901px) {
     .container > .sidebar-collapse {
         display: none;
     }    
@@ -102,12 +102,13 @@ html {
     width: 20vw;
     height: 100vh;
     min-width: 250px;
-    max-width: 400px;
+    max-width: 300px;
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 2ch;
     box-shadow: 0 0 15px 5px var(--shadows);
+    margin-right: auto;
 }
 .content {
     background-color: var(--gray);

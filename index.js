@@ -2,7 +2,7 @@
     const arrow = document.querySelector(".sidebar-collapse")
 
 window.addEventListener("resize", function() {
-    if (window.innerWidth > 750) {
+    if (window.innerWidth > 900) {
         collapse.classList.remove("visible"); arrow.classList.remove("open")
     }
   });
