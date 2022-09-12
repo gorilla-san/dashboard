@@ -1,10 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
+
 :root {
-    --white: rgb(182, 182, 182);
+    --white: rgb(233, 233, 233);
     --gray: rgb(19, 19, 19);
     --purple: rgb(128, 0, 64);
+    --hoverpurple: rgb(230, 0, 115);
     --shadows: rgb(0, 0, 0);
+    font-size: min(calc(20px + 1vw), 30px);
+    --card-shadows: 0 0 2px 5px  rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--gray);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--purple);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--hoverpurple);
+  }
+
+.projects>.project>h3 {
+    font-size: min(calc(20px + 0.5vw), 20px);
+    color: var(--gray);
+}
+.projects>.project>p {
+    font-size: min(calc(15px + 0.5vw), 16px);
+    color: var(--gray);
 }
 
 html {
@@ -34,23 +63,6 @@ html {
         position: fixed;
         left: -260px;
     }
-    div .content {
-        width: 100%;
-    }
-
-    .content > .main {
-        width: 100%;
-        flex-wrap: wrap;
-        overflow-y: scroll;
-    }
-
-    .main > .important {
-        width: 100%;
-    }
-
-    .main > .projects {
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -70,6 +82,8 @@ html {
 
     .main > .projects {
         width: 100%;
+        height: auto;
+        overflow-y: unset;
     }
 }
 
@@ -87,7 +101,8 @@ html {
     background-color:var(--gray);
     width: 20vw;
     height: 100vh;
-    min-width: 220px;
+    min-width: 250px;
+    max-width: 400px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -116,33 +131,47 @@ html {
     border-radius: 10px;
     position: fixed;
     top: 40%;
-    left: -35.35px;
+    left: -25.35px;
     right: auto;
 }
 
-@media (hover: none) {
-    .container > .sidebar-collapse:hover {
-        background-color: var(--purple);
+@media (hover: hover) {
+    .sidebar-collapse:hover {
+        background-color: var(--white);
+    }
+    .project:hover {
+        background-color: white;
+        cursor: pointer;
+        border-left: 5px solid var(--hoverpurple);
+
+    }
+    li:hover {
+        color: var(--hoverpurple);
+        cursor: pointer;
+    }
+    .icons > i:hover {
+        color: var(--hoverpurple);
+    }
+    .sidebar > span:hover {
+        transform: rotate3d(0, 1, 0, 720deg) scale(1.2);
+        cursor: pointer;
+        color: var(--hoverpurple);
     }
 }
 
-.sidebar-collapse:hover {
-    background-color: var(--white);
-}
 
 ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
     gap: 1ch;
-    font-size: 30px;
 }
 
 .sidebar span {
+    transition: ease-in-out 1s;
     font-weight: 900;
-    font-size: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 2ch;
+    padding-bottom: 3ch;
 }
 
 li > i {
@@ -195,23 +224,44 @@ a {
     margin: 0;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
 .projects::-webkit-scrollbar {
     display: none;
   }
   
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .projects {
+.projects {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+.announcements::-webkit-scrollbar {
+    display: none;
+  }
+  
+.announcements {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
 
+ .announcements::-webkit-scrollbar {
+    display: none;
+  }
+  
+.announcements {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 
 .project {
     box-sizing: border-box;
     border-style: solid;
     border-color: var(--white);
     background-color: var(--white);
+    padding: 10px 20px;
+    box-shadow:var(--card-shadows);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    border-left: 5px solid var(--purple);
+
 }
 
 .important {
@@ -224,6 +274,7 @@ a {
     gap: 50px;
     padding: 3ch;
     margin: 0;
+    
 }
 
 .your-projects {
@@ -233,8 +284,9 @@ a {
 
 .announcements {
     box-sizing: border-box;
-    border-style: solid;
-    border-color: var(--white);
+    box-shadow:var(--card-shadows);
+    overflow-y: scroll;
+    border-radius: 10px;
     background-color: var(--white);
 }
 
@@ -243,4 +295,18 @@ a {
     border-style: solid;
     border-color: var(--white);
     background-color: var(--white);
+    box-shadow:var(--card-shadows);
+
+}
+
+.icons i{
+    color: var(--purple);
+}
+
+.icons {
+    align-self: flex-end;
+    justify-self: flex-end;
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
 }
