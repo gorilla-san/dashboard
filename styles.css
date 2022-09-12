@@ -85,6 +85,12 @@ html {
     right: auto;
 }
 
+@media (hover: none) {
+    .sidebar-collapse:hover {
+        background-color: inherit;
+    }
+}
+
 .sidebar-collapse:hover {
     background-color: var(--white);
 }
