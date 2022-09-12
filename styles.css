@@ -394,6 +394,9 @@ img {
     height: 90%;
     border-style: solid;
     border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    padding-left: 1ch;
 }
 
 .welcome {
