@@ -1,9 +1,19 @@
-    const collapse = document.querySelector(".sidebar")
-    const arrow = document.querySelector(".sidebar-collapse")
+const collapse = document.querySelector(".sidebar")
+const arrow = document.querySelector(".sidebar-collapse")
+const startNewProject = document.querySelector("#new-project")
 
 window.addEventListener("resize", function() {
     if (window.innerWidth > 900) {
-        collapse.classList.remove("visible"); arrow.classList.remove("open")
+        collapse.classList.remove("visible"); arrow.classList.remove("open");
+    }
+    if (window.innerWidth > 1250) {
+        startNewProject.textContent = "Start New Project";
+    }
+    else if (window.innerWidth <= 1250 && window.innerWidth > 1060) {
+        startNewProject.textContent = "New Project";
+    }
+    else if (this.window.innerWidth <=1060) {
+        startNewProject.textContent = "New";
     }
   });
 
@@ -19,3 +29,4 @@ function collapseSidebar () {
     else arrow.classList.add("open");
 
 }
+

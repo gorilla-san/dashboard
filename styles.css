@@ -37,7 +37,7 @@
 }
 
 .trend>div>span {
-    font-size: min(calc(20px + 0.5vw), 20px);
+    font-size: min(calc(10px + 0.5vw), 25px);
     color: var(--gray);
     font-weight: 700;
 }
@@ -46,10 +46,20 @@
     color: var(--gray);
 }
 
+.welcome>div>p {
+    font-size: min(calc(15px + 0.5vw), 16px);
+    font-weight: 700;
+}
+
+.welcome>div>span {
+    font-size: min(calc(20px + 0.5vw), 40px);
+    color: var(--white);
+    font-weight: 700;
+}
+
 html {
     background-color: var(--gray);
     overflow: hidden;
-
 }
 * {
     margin: 0;
@@ -168,6 +178,13 @@ html {
         cursor: pointer;
         color: var(--hoverpurple);
     }
+    .search-box label:hover {
+        color: var(--hoverpurple);
+        cursor: pointer;
+    }
+    #new-project:hover {
+        background-color: white;
+    }
 }
 
 
@@ -210,9 +227,9 @@ a {
 }
 
 .header {
-    height: 20vh;
     border-bottom-style: solid;
-    border-color: var(--white);
+    border-bottom-width: 5px;
+    border-color: black;
 }
 
 .main {
@@ -343,4 +360,74 @@ img {
     gap: 10px;
     align-items: center;
     justify-content: flex-start;
+}
+.header {
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.profile-stuff {
+    align-self: flex-end;
+    margin-left: auto;
+    display: flex;
+    gap: 30px;
+}
+
+.search-box {
+    display: flex;
+    gap: 20px;
+    width: 80%;
+    align-items: center;
+}
+
+#search {
+    width: 100%;
+    height: 90%;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.mainprofilepicture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.controls {
+    justify-self: flex-end;
+    margin-left: auto;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#new-project {
+    background-color: var(--white);
+    color: var(--purple);
+    font-weight: 700;
+    font-size: min(calc(20px + 0.5vw), 40px);
+    padding:10px 30px;
+    border-radius: 10px;
 }
