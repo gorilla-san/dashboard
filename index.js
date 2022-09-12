@@ -1,6 +1,7 @@
 const collapse = document.querySelector(".sidebar")
 const arrow = document.querySelector(".sidebar-collapse")
 const startNewProject = document.querySelector("#new-project")
+const projects = document.querySelector(".projects")
 
 window.addEventListener("resize", function() {
     if (window.innerWidth > 900) {
@@ -31,5 +32,5 @@ function collapseSidebar () {
 }
 
 function getNoped () {
-    alert("Nope")
+    projects.innerHTML += '<div class="project"><h3>New Project</h3><p>Should be fine. Right?</p><div class="icons"><i class="fa-solid fa-thumbtack"></i><i class="fa-solid fa-share-nodes"></i></div></div>'
 }
