@@ -425,9 +425,12 @@ img {
 
 #new-project {
     background-color: var(--white);
-    color: var(--purple);
+    color: var(--gray);
     font-weight: 700;
     font-size: min(calc(20px + 0.5vw), 40px);
     padding:10px 30px;
     border-radius: 10px;
+    box-shadow: 0 0 5px 5px black;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--gray);
 }

@@ -30,3 +30,6 @@ function collapseSidebar () {
 
 }
 
+function getNoped () {
+    alert("Nope")
+}
