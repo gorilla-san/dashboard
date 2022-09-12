@@ -37,12 +37,12 @@
 }
 
 .trend>div>span {
-    font-size: min(calc(10px + 0.5vw), 25px);
+    font-size: min(calc(10px + 0.5vw), 20px);
     color: var(--gray);
     font-weight: 700;
 }
 .trend>div>p {
-    font-size: min(calc(15px + 0.5vw), 16px);
+    font-size: min(calc(15px + 0.5vw), 13px);
     color: var(--gray);
 }
 
