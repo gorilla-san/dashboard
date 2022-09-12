@@ -86,7 +86,7 @@ html {
 }
 
 @media (hover: none) {
-    .sidebar-collapse:hover {
+    .container > .sidebar-collapse:hover {
         background-color: inherit;
     }
 }
